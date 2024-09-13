@@ -19,4 +19,4 @@ This repository is a collection of C++ programs and exercises from the book "Tea
 To get started with the exercises, clone this repository to your local machine:
 
 ```sh
-git clone https://github.com/eng-musamolla/cpp-practice-herbert-schildt.git
+git clone https://github.com/eng-musamolla/teach-yourself-cpp-exercises.git
