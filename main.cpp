@@ -1,13 +1,19 @@
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-    char* username = getenv("USER");
-    if (username == nullptr) {
-        std::cerr << "Unable to get the username." << std::endl;
+    char* windowsUsername = getenv("USERNAME");
+    
+    if (windowsUsername == nullptr) {
+        cerr << "Unable to get the Windows username." << endl;
     } else {
-        std::cout << "Hello, Mr. " << username << std::endl;
+        cout << endl;
+        cout << endl;
+        cout << "Hello Mr. " << windowsUsername << endl;
     }
+    
     return 0;
 }
 
