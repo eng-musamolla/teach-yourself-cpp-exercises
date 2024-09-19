@@ -28,7 +28,6 @@ C++ is a powerful language that combines the efficiency of C with modern program
 
 
 --------------------
---------------------
 ## Student Information
 **Name:** Musa Molla  
 **Id No:** 21221203029  
