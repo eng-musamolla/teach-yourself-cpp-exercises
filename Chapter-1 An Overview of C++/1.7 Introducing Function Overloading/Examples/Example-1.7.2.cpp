@@ -11,8 +11,8 @@ void date(int month, int day, int year) {
 }
 
 int main() {
-    date("9/10/2024");
-    date(8, 20, 2024);
+    date("10/11/2025");
+    date(9, 21, 2025);
 
     return 0;
 }

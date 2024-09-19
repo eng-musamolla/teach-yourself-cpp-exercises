@@ -1,7 +1,7 @@
 
 #include<iostream>
 using namespace std;
-class  myclass {
+class  YourClass {
     int a;
 
 public:
@@ -16,7 +16,7 @@ public:
 };
 
 int main() {
-    myclass obj1, obj2;
+    YourClass obj1, obj2;
 
     obj1.set_a(10);
     obj2.set_a(99);

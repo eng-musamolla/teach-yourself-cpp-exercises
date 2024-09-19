@@ -2,9 +2,9 @@
 # include <iostream>
 using namespace std ;
 int main (){
-    int a ;
+    int value ;
     cout << " Enter a value : " ;
-    cin >> a ;
-    cout << "Your Entered value is: " << a << endl;
+    cin >> value ;
+    cout << "Your Entered value is: " << value << endl;
     return 0;
 }

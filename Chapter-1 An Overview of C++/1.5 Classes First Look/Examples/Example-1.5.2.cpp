@@ -1,7 +1,7 @@
 
 #include<iostream>
 using namespace std;
-class  myclass {
+class  YourClass {
 
 private:
     int a;
@@ -12,17 +12,17 @@ public:
     int  get_a();
 
 };
-void myclass :: set_a(int num) {
+void YourClass :: set_a(int num) {
     a=num;
 }
 
-int myclass :: get_a() {
+int YourClass :: get_a() {
     return a;
 }
 
 
 int main() {
-    myclass obj1, obj2;
+    YourClass obj1, obj2;
 
     obj1.set_a(10);
     obj2.set_a(99);

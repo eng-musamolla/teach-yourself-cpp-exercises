@@ -4,19 +4,19 @@
 using namespace std;
 
 int main() {
-    int a;
+    int an;
     double b;
     string c;
 
-    cout<<"Enter a interger value: ";
-    cin>>a;
+    cout<<"Enter an integer value: ";
+    cin>>an;
     cout<<"Enter a double value: ";
     cin>>b;
-    cout<<"Enter an string: ";
+    cout<<"Enter a string: ";
     cin.ignore();
     getline(cin,c);
 
-    cout << "Integer is: " << a <<endl;
+    cout << "Integer is: " << an <<endl;
     cout << "Double is: " << b <<endl;
     cout << "String is: " << c <<endl;
 

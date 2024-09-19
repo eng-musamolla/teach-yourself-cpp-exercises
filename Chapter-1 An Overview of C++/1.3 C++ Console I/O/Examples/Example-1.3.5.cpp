@@ -2,12 +2,12 @@
 #include<iostream>
 using namespace std;
 int main() {
-    char a;
+    char value;
 
     cout<<"Enter x to stop:" <<endl;
     do {
         cout<<": ";
-        cin>>a;
+        cin>>value;
     }
-    while (a!='x');
+    while (value!='x');
 }

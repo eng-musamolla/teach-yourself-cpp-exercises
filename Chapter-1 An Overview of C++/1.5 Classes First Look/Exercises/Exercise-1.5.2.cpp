@@ -23,8 +23,8 @@ public:
 
 int main() {
     card book1, book2;
-    book1.store("First Book", "Opi Chandra Sharma", 10);
-    book2.store("Second Book", "Opi Chandra Sharma", 5);
+    book1.store("First Book", "Bola jabe na", 10);
+    book2.store("Second Book", "Name bolle chakri thakbe na", 5);
 
     cout<<"Book1 Info:"<< endl;
     book1.show();
