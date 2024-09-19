@@ -36,4 +36,8 @@ C++ is a powerful language that combines the efficiency of C with modern program
 
 **Email:** [eng.musamolla@gmail.com]  
 **GitHub:** [https://github.com/eng-musamolla]  
-**WebSite:** [https://eng.musamolla.com]
+**Website:** [https://eng.musamolla.com]  
+**LinkedIn:** [https://www.linkedin.com/in/eng-musamolla]  
+**Facebook:** [https://www.facebook.com/eng.musamolla]  
+**Twitter:** [https://twitter.com/eng_musamolla]  
+**Instagram:** [https://www.instagram.com/eng.musamolla]  
