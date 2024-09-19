@@ -27,9 +27,13 @@ C++ is a powerful language that combines the efficiency of C with modern program
 
 
 
-## Developer Info
-**Name:** [Musa Molla]  
-**Email:** [eng.musamolla@gmail.com]  
-**GitHub:** [https://github.com/eng-musamolla]
-**WebSite:** [https://eng.musamolla.com]
+## Student Information
+--------------------
+**Name:** Musa Molla  
+**Id No:** 21221203029  
+**Intake:** 40  
+**Section:** 01  
 
+**Email:** [eng.musamolla@gmail.com]  
+**GitHub:** [https://github.com/eng-musamolla]  
+**WebSite:** [https://eng.musamolla.com]
