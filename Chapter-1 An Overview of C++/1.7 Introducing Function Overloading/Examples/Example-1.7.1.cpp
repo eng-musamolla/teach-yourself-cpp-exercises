@@ -1,28 +1,34 @@
-
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int myabs(int n) {
-    cout<<"Integer absolute: ";
-    return (n<0) ? -n : n;
-}
-long myabs(long n) {
-    cout<<"Long absolute: ";
-    return (n<0) ? -n : n;
-}
-float myabs(float n) {
-    cout<<"Float absolute: ";
-    return (n<0) ? -n : n;
-}
+// Overload myAbs() three ways
+// The problem is that the abs function is already defined in the cmath library, which causes ambiguity. To fix this, you should use a different name for your custom abs functions.
+
+int myAbs(int n);
+long myAbs(long n);
+double myAbs(double n);
 
 int main() {
-    int a= -5;
-    long b= -123456788765;
-    float c= -10.7;
-
-    cout << "absolute of a: " << myabs(a) <<endl;
-    cout << "absolute of b: " << myabs(b) <<endl;
-    cout << "absolute of c: " << myabs(c) <<endl;
-
+    cout << "Absolute value of -10: " << myAbs(-10) << "\n\n";
+    cout << "Absolute value of -10L: " << myAbs(-10L) << "\n\n";
+    cout << "Absolute value of -10.01: " << myAbs(-10.01) << "\n\n";
     return 0;
+}
+
+// myAbs() for ints
+int myAbs(int n) {
+    cout << "In integer myAbs()\n";
+    return n < 0 ? -n : n;
+}
+
+// myAbs() for longs
+long myAbs(long n) {
+    cout << "In long myAbs()\n";
+    return n < 0 ? -n : n;
+}
+
+// myAbs() for doubles
+double myAbs(double n) {
+    cout << "In double myAbs()\n";
+    return n < 0 ? -n : n;
 }
