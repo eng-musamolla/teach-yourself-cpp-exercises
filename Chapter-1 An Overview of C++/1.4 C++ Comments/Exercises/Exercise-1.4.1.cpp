@@ -1,20 +1,19 @@
+/* 
+As an experiment, determine whether this comment (which nests a C-like comment within
+a C++-style, single-line comment) is valid: 
 
+*/ 
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main (){
-    int a , b , d , min ;
-    cout<<"Enter two numbers : " ;
-    cin>>a>>b;
-    min = a > b ? b : a ;
-    for ( d = 2; d < min ; d ++)
-        if ((( a % d ) ==0) && (( b % d ) ==0) )
-            break ;
-    if (d==min )
-    {
-        cout<<" No common denominators" << endl;
-        return 0;
-    }
-    cout<< "The lowest common denominator is " << d; //The lowest common denominator is 2 if a=10 and b=20
+
+int main() {
+    /* 
+    As an experiment, determine whether this comment (which nests a C-like comment within
+    a C++-style, single-line comment) is valid: 
+    // This is a single-line comment within a multi-line comment
+    */
+    
+    cout << "Hello, World!" << endl;
     return 0;
 }
