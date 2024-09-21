@@ -1,37 +1,34 @@
+#include <iostream>
+#include <string>
 
-#include<iostream>
-#include<string>
 using namespace std;
-class card {
-    string tittle;
+
+class Card {
+private:
+    string title;
     string author;
-    int copies;
+    int copiesOnHand;
 
 public:
-    void store(string t, string a, int c) {
-        tittle=t;
-        author=a;
-        copies=c;
+    void store(const string& bookTitle, const string& bookAuthor, int numCopies) {
+        title = bookTitle;
+        author = bookAuthor;
+        copiesOnHand = numCopies;
     }
 
-    void show() {
-        cout << "Tittle: " << tittle << endl;
+    void show() const {
+        cout << "Title: " << title << endl;
         cout << "Author: " << author << endl;
-        cout << "Copies: " << copies << endl;
+        cout << "Copies on hand: " << copiesOnHand << endl;
     }
 };
 
 int main() {
-    card book1, book2;
-    book1.store("First Book", "Bola jabe na", 10);
-    book2.store("Second Book", "Name bolle chakri thakbe na", 5);
+    cout << endl << endl;
 
-    cout<<"Book1 Info:"<< endl;
-    book1.show();
-    cout<<endl;
-
-    cout<<"Book2 Info:" <<endl;
-    book2.show();
+    Card book;
+    book.store("The C++ Programming Language", "Bjarne Stroustrup", 5);
+    book.show();
 
     return 0;
 }

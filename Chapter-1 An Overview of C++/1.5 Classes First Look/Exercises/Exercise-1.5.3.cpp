@@ -1,83 +1,91 @@
-
 #include <iostream>
 using namespace std;
+#define SIZE 100
 
 class CircularQueue {
 private:
-    static const int SIZE = 100;
-    int arr[SIZE];
-    int front;
-    int rear;
-    int count;
+    int queue[SIZE];
+    int head;
+    int tail;
 
 public:
+    CircularQueue() : head(-1), tail(-1) {}
 
-    CircularQueue() {
-        front = 0;
-        rear = 0;
-        count = 0;
+    bool isFull() {
+        return (tail + 1) % SIZE == head;
     }
 
+    bool isEmpty() {
+        return head == -1;
+    }
 
-    void enqueue(int value) {
-        if (count == SIZE) {
-            cout << "Queue is full. Cannot enqueue " << value << "." << endl;
+    void enqueue(int item) {
+        if (isFull()) {
+            cout << "Queue is full" << endl;
             return;
         }
-        arr[rear] = value;
-        rear = (rear + 1) % SIZE;
-        count++;
-    }
-
-    
-    int dequeue() {
-        if (count == 0) {
-            cout << "Queue is empty. Cannot dequeue." << endl;
-            return -1; // Return -1 to indicate an error
+        if (isEmpty()) {
+            head = 0;
         }
-        int value = arr[front];
-        front = (front + 1) % SIZE;
-        count--;
-        return value;
+        tail = (tail + 1) % SIZE;
+        queue[tail] = item;
     }
 
+    int dequeue() {
+        if (isEmpty()) {
+            cout << "Queue is empty" << endl;
+            return -1;
+        }
+        int item = queue[head];
+        if (head == tail) {
+            head = -1;
+            tail = -1;
+        } else {
+            head = (head + 1) % SIZE;
+        }
+        return item;
+    }
 
-    void print() const {
-        if (count == 0) {
+    void printQueue() {
+        if (isEmpty()) {
             cout << "Queue is empty" << endl;
             return;
         }
-        cout << "Queue elements: ";
-        for (int i = 0; i < count; ++i) {
-            cout << arr[(front + i) % SIZE] << " ";
+        int i = head;
+        while (true) {
+            cout << queue[i] << " ";
+            if (i == tail) break;
+            i = (i + 1) % SIZE;
         }
         cout << endl;
     }
 };
 
 int main() {
-    CircularQueue q;
+    CircularQueue cq;
+    for (int i = 0; i < 5; ++i) {
+        cq.enqueue(i);
+        cout << "Enqueued " << i << ": ";
+        cq.printQueue();
+    }
 
+    for (int i = 0; i < 3; ++i) {
+        int item = cq.dequeue();
+        cout << "Dequeued " << item << ": ";
+        cq.printQueue();
+    }
 
-    q.enqueue(10);
-    q.enqueue(20);
-    q.enqueue(30);
+    for (int i = 5; i < 8; ++i) {
+        cq.enqueue(i);
+        cout << "Enqueued " << i << ": ";
+        cq.printQueue();
+    }
 
-
-    q.print();
-
-    // Dequeuing an element
-    cout << "Dequeued element: " << q.dequeue() << endl;
-
-
-    q.print();
-
-    
-    q.enqueue(40);
-    q.enqueue(50);
-
-    // Printing the queue
-    q.print();
+    while (!cq.isEmpty()) {
+        int item = cq.dequeue();
+        cout << "Dequeued " << item << ": ";
+        cq.printQueue();
+    }
 
     return 0;
 }
