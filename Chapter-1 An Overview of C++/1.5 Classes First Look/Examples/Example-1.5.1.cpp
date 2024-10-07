@@ -6,7 +6,6 @@
 using namespace std;
 
 class myclass {
-    // private to myclass
     int a;
     public: 
     void set_a(int num);

@@ -13,7 +13,6 @@ following main() function will cause an error:
 using namespace std;
 
 class myclass {
-    // private to myclass
     public: // if we remove this line, then the error will be welcomed 🥱
     int a;
     public: 
@@ -34,8 +33,8 @@ int myclass::get_a() {
 int main ()
 {
     myclass ob1 , ob2 ;
-    ob1.a = 10; // ERROR ! cannot access private member
-    ob2.a = 99; // by non - member functions .
+    ob1.a = 10; 
+    ob2.a = 99; 
     cout << ob1 . get_a () << "\n";
     cout << ob2 . get_a () << "\n";
     return 0;

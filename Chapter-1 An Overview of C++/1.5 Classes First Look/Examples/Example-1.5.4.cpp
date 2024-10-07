@@ -1,4 +1,3 @@
-// Creation Date: 12-05-2021
 
 /* Example-1.5.3 : To get a taste of the power of objects, let’s look at a more practical example. This program
 creates a class called stack that implements a stack that can be used to store characters:
@@ -8,24 +7,23 @@ creates a class called stack that implements a stack that can be used to store c
 # include <iostream >
 using namespace std;
 # define SIZE 10
-// Declare a stack class for characters
 class stack {
     char stck[SIZE];
     int tos;
     public:
-    void init(); // initialize stack
-    void push(char ch); // push character on stack
-    char pop(); // pop character from stack
+    void init(); 
+    void push(char ch); 
+    char pop(); 
 };
 
 
-// Initialize the stack
+
 void stack::init() {
     tos = 0;
 }
 
 
-// Push a character
+
 void stack::push(char ch) {
     if (tos==SIZE) {
         cout << "Stack is full" << endl;
@@ -36,7 +34,7 @@ void stack::push(char ch) {
     tos++;
 }
 
-// Pop a character
+
 char stack::pop() {
     if (tos==0){
         cout << "Stack is empty" << endl;
@@ -49,10 +47,10 @@ char stack::pop() {
 
 
 int main() {
-    stack s1, s2; // create two stack objects
+    stack s1, s2; 
     int i;
 
-    //  initialize the stacks
+    
     s1.init();
     s2.init();
 

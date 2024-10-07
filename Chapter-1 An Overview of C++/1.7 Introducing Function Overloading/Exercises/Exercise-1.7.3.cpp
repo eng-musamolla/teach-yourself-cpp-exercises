@@ -1,24 +1,32 @@
+/*
+Example-1.7.3: Create a function called min() that returns the smaller of the two numeric arguments
+used to call the function. Overload min() so it accepts characters, integers, and doubles
+as arguments.
+*/
 
 
-#include<iostream>
+
+
+#include <iostream>
 using namespace std;
 
-char min(char a, char b) {
-    return (a<b) ? a : b;
-}
 int min(int a, int b) {
-    return (a<b) ? a : b;
+    return (a < b) ? a : b;
 }
+
 double min(double a, double b) {
-    return (a<b) ? a : b;
+    return (a < b) ? a : b;
+}
+
+char min(char a, char b) {
+    return (a < b) ? a : b;
 }
 
 int main() {
-    char g='B' , h='F';
-    int c= 6, d=10;
-    double e=10.5, f=30.5;
-    cout << "Smaller Character: " << min(g,h)<<endl;
-    cout << "Smaller Integer: " << min(c,d)<<endl;
-    cout << "Smaller Double: " << min(e,f);
+    cout << "Min of 3 and 5: " << min(3, 5) << endl;
+
+    cout << "Min of 3.5 and 2.1: " << min(3.5, 2.1) << endl;
+
+    cout << "Min of 'a' and 'z': " << min('a', 'z') << endl;
     return 0;
 }
